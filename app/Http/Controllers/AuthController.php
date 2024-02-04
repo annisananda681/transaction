@@ -9,6 +9,15 @@ use Illuminate\Support\Facades\Session;
 class AuthController extends Controller
 {
     const NOT_ALLOWED = "are not allowed to access";
+
+    public function index()
+    {
+        if (Auth::check()) {
+            return redirect('/');
+        }
+   
+        return view('login');
+    }
     
     public function loginAuth(Request $request)
     {
