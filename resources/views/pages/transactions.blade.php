@@ -18,11 +18,10 @@
                 <caption></caption>
                 <thead>
                     <tr>
-                        <th class="text-center" id="thPenjualan" style="width:15%">Penjualan</th>
-                        <th class="text-center" id="thBebanAdm" style="width:15%">Beban</th>
-                        <th class="text-center" id="thPendapatanLain" style="width:15%">Pendapatan Lain</th>
-                        <th class="text-center" id="thTotal" style="width:15%">Total</th>
-                        <th class="text-center" id="thTotalDenganPajak" style="width:15%">Pajak (22%)</th>
+                        <th class="text-center" id="thCustomer" style="width:20%">Customer</th>
+                        <th class="text-center" id="thProduct" style="width:20%">Product</th>
+                        <th class="text-center" id="thDescription" style="width:20%">Description</th>
+                        <th class="text-center" id="thPrice" style="width:15%">Price</th>
                         <th class="text-center" id="thActionHeader" style="width:25%">Action</th>
                     </tr>
                 </thead>
