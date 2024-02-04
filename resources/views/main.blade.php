@@ -35,7 +35,7 @@
             }
         </style>
     </head>
-    <body class="bg-light">
+    <body>
         <div class="d-flex">
             <div class="sidebar bg-primary">
                 <ul class="nav flex-column mb-auto mt-3">

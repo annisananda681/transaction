@@ -16,10 +16,10 @@
                 <caption></caption>
                 <thead>
                     <tr>
-                        <th class="text-center" id="thCustomer" style="width:20%">Customer</th>
-                        <th class="text-center" id="thProduct" style="width:20%">Product</th>
-                        <th class="text-center" id="thDescription" style="width:20%">Description</th>
-                        <th class="text-center" id="thPrice" style="width:15%">Price</th>
+                        <th class="text-center" id="thCustomer" style="width:20%">Pelanggan</th>
+                        <th class="text-center" id="thProduct" style="width:20%">Produk</th>
+                        <th class="text-center" id="thDescription" style="width:20%">Keterangan</th>
+                        <th class="text-center" id="thPrice" style="width:15%">Harga</th>
                         <th class="text-center" id="thActionHeader" style="width:25%">Action</th>
                     </tr>
                 </thead>
@@ -32,7 +32,7 @@
                             <td>{{ $data->description }}</td>
                             <td>Rp{{ number_format($data->price, 0, ',', '.') }}</td>
                             <td>
-                                <a href="/edit-page/{{ $data->id }}" class="btn btn-info mb-1">Edit</a>
+                                <a href="/update-page/{{ $data->id }}" class="btn btn-primary mb-1">Edit</a>
                                 <form method="post" class="d-inline"
                                     title="Delete" action="/delete/{{ $data->id }}">
                                     {{ csrf_field() }}
