@@ -13,7 +13,7 @@ class TransactionController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            return view('transactions', [
+            return view('pages.transactions', [
                 'transactions' => Transaction::latest('created_at')->get()
             ]);
         }
