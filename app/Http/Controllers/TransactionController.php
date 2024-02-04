@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 
 class TransactionController extends Controller
 {
-    const REDIRECTHOME = "/transactions";
+    const REDIRECTHOME = "/";
 
     public function index()
     {

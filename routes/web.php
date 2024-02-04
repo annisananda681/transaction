@@ -15,6 +15,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::delete('/delete-data/{id}', [TransactionController::class, 'deleteData']);
+Route::get('/update', [TransactionController::class, 'updatePage']);
+Route::post('/update-data/{id}', [TransactionController::class, 'updateData']);
+Route::post('/add-data', [TransactionController::class, 'addData']);
+Route::get('/add', [TransactionController::class, 'addPage']);
 Route::get('/', [TransactionController::class, 'index']);
 Route::get('/logout', [AuthController::class, 'logOut']);
 Route::post('/login-auth', [AuthController::class, 'loginAuth']);

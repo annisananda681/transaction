@@ -2,15 +2,13 @@
 
 @section('container')
 
-<!-- Page Heading -->
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Data Transaksi</h1>
     <div>
-        <a href="/add-page" class="btn btn-primary">Tambah Data</a>
+        <a href="/add" class="btn btn-primary">Tambah Data</a>
     </div>
 </div>
 
-<!-- DataTales -->
 <div class="card shadow mb-4">
     <div class="card-body">
         <div class="table-responsive">
