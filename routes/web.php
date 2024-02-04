@@ -18,6 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/logout', AuthController::class, 'logOut');
-Route::get('/login-auth', AuthController::class, 'loginAuth');
-Route::get('/login', AuthController::class, 'index');
+Route::get('/logout', [AuthController::class, 'logOut']);
+Route::post('/login-auth', [AuthController::class, 'loginAuth']);
+Route::get('/login', [AuthController::class, 'index']);
