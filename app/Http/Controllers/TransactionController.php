@@ -13,9 +13,18 @@ class TransactionController extends Controller
     public function index()
     {
         if (Auth::check()) {
-            return view('pages.transactions', [
+            return view('transactions.home', [
                 'transactions' => Transaction::latest('created_at')->get()
             ]);
+        }
+   
+        return redirect('login')->withSuccess(AuthController::NOT_ALLOWED);
+    }
+
+    public function addPage()
+    {
+        if (Auth::check()) {
+            return view('transactions.add');
         }
    
         return redirect('login')->withSuccess(AuthController::NOT_ALLOWED);

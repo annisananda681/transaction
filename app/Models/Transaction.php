@@ -12,6 +12,7 @@ class Transaction extends Model
     protected $fillable = [
         'customer',
         'product',
+        'description',
         'price',
     ];
 }
