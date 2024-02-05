@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::delete('/delete-data/{id}', [TransactionController::class, 'deleteData']);
-Route::get('/update', [TransactionController::class, 'updatePage']);
-Route::post('/update-data/{id}', [TransactionController::class, 'updateData']);
+Route::delete('/delete/{id}', [TransactionController::class, 'deleteData']);
+Route::get('/update/{id}', [TransactionController::class, 'updatePage']);
+Route::post('/update-data', [TransactionController::class, 'updateData']);
 Route::post('/add-data', [TransactionController::class, 'addData']);
 Route::get('/add', [TransactionController::class, 'addPage']);
 Route::get('/', [TransactionController::class, 'index']);

@@ -52,6 +52,17 @@ class TransactionController extends Controller
         return redirect('login')->withSuccess(AuthController::NOT_ALLOWED);
     }
 
+    public function updatePage($id)
+    {
+        if (Auth::check()) {
+            return view('transactions.update', [
+                'transaction' => Transaction::find($id)
+            ]);
+        }
+   
+        return redirect('login')->withSuccess(AuthController::NOT_ALLOWED);
+    }
+
     public function updateData(Request $request)
     {
         if (Auth::check()) {

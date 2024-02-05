@@ -17,34 +17,35 @@
 <div class="row border border-primary-subtle rounded px-3 py-4">
     <div class="col">
         <h3 class="mb-5">Edit Data Transaksi</h3>
-        <form action="/add-data" method="post">
+        <form action="/update-data" method="post">
             @csrf
+            <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
             <div class="mb-3 row">
                 <label for="customer" class="col-sm-3 col-form-label">Nama Pelanggan</label>
                 <div class="col-sm-9">
                     <input type="text" class="form-control border-primary-subtle" name="customer" id="customer"
-                    value="">
+                    value="{{ $transaction->customer }}">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="product" class="col-sm-3 col-form-label">Nama Produk</label>
                 <div class="col-sm-9">
                     <input type="text" class="form-control border-primary-subtle" name="product" id="product"
-                    value="">
+                    value="{{ $transaction->product }}">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="price" class="col-sm-3 col-form-label">Total Harga</label>
                 <div class="col-sm-9">
                     <input type="number" class="form-control border-primary-subtle" name="price" id="price"
-                    value="">
+                    value="{{ $transaction->price }}">
                 </div>
             </div>
             <div class="mb-3 row">
                 <label for="description" class="col-sm-3 col-form-label">Keterangan</label>
                 <div class="col-sm-9">
                     <textarea class="form-control border-primary-subtle" name="description"
-                    id="description" rows="3"></textarea>
+                    id="description" rows="3">{{ $transaction->description }}</textarea>
                 </div>
             </div>
             <div class="row mt-5">

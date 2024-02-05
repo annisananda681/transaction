@@ -32,7 +32,7 @@
                             <td>{{ $data->description }}</td>
                             <td>Rp{{ number_format($data->price, 0, ',', '.') }}</td>
                             <td>
-                                <a href="/update-page/{{ $data->id }}" class="btn btn-primary mb-1">Edit</a>
+                                <a href="/update/{{ $data->id }}" class="btn btn-primary mb-1">Edit</a>
                                 <form method="post" class="d-inline"
                                     title="Delete" action="/delete/{{ $data->id }}">
                                     {{ csrf_field() }}
