@@ -17,7 +17,7 @@
 <div class="row border border-primary-subtle rounded px-3 py-4">
     <div class="col">
         <h3 class="mb-5">Tambah Data Transaksi</h3>
-        <form action="/add-data" method="post">
+        <form action="/transactions/add-data" method="post">
             @csrf
             <div class="mb-3 row">
                 <label for="customer" class="col-sm-3 col-form-label">Nama Pelanggan</label>

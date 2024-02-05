@@ -17,7 +17,7 @@
 <div class="row border border-primary-subtle rounded px-3 py-4">
     <div class="col">
         <h3 class="mb-5">Edit Data Transaksi</h3>
-        <form action="/update-data" method="post">
+        <form action="/transactions/update-data" method="post">
             @csrf
             <input type="hidden" name="transaction_id" value="{{ $transaction->id }}">
             <div class="mb-3 row">

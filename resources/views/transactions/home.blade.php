@@ -5,7 +5,7 @@
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
     <h1 class="h3 mb-0 text-gray-800">Data Transaksi</h1>
     <div>
-        <a href="/add" class="btn btn-primary">Tambah Data</a>
+        <a href="/transactions/add" class="btn btn-primary">Tambah Data</a>
     </div>
 </div>
 
@@ -32,9 +32,9 @@
                             <td>{{ $data->description }}</td>
                             <td>Rp{{ number_format($data->price, 0, ',', '.') }}</td>
                             <td>
-                                <a href="/update/{{ $data->id }}" class="btn btn-primary mb-1">Edit</a>
+                                <a href="/transactions/update/{{ $data->id }}" class="btn btn-primary mb-1">Edit</a>
                                 <form method="post" class="d-inline"
-                                    title="Delete" action="/delete/{{ $data->id }}">
+                                    title="Delete" action="/transactions/delete/{{ $data->id }}">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-danger">
