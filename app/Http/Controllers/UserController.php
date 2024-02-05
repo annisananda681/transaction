@@ -67,12 +67,19 @@ class UserController extends Controller
 
             $this->validate($request, [
                 'username' => 'required',
-                'password' => 'required',
             ]);
 
             $user = User::find($id);
             $user->username = $request->input('username');
-            $user->password = $request->input('password');
+
+            if ($request->input('change_password')) {
+                $this->validate($request, [
+                    'password' => 'required',
+                ]);
+
+                $user->password = $request->input('password');
+            }
+  
             $user->save();
             
             return redirect(self::REDIRECTHOME);
