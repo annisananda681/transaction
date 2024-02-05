@@ -2,6 +2,8 @@
 
 @section('container')
 
+<div class="container">
+
 @if ($errors->any())
 <div class="alert alert-danger alert-dismissible fade show" role="alert">
     <ul>
@@ -13,7 +15,6 @@
 </div>
 @endif
 
-<div class="container">
 <div class="row border border-primary-subtle rounded px-3 py-4">
     <div class="col">
         <h3 class="mb-5">Tambah Data Transaksi</h3>

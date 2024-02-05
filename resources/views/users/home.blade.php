@@ -3,9 +3,9 @@
 @section('container')
 
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-    <h1 class="h3 mb-0 text-gray-800">Data Transaksi</h1>
+    <h1 class="h3 mb-0 text-gray-800">Data User</h1>
     <div>
-        <a href="/transactions/add" class="btn btn-primary">Tambah Data</a>
+        <a href="/users/add" class="btn btn-primary">Tambah Data</a>
     </div>
 </div>
 
@@ -16,24 +16,18 @@
                 <caption></caption>
                 <thead>
                     <tr>
-                        <th class="text-center" id="thCustomer" style="width:20%">Pelanggan</th>
-                        <th class="text-center" id="thProduct" style="width:20%">Produk</th>
-                        <th class="text-center" id="thDescription" style="width:20%">Keterangan</th>
-                        <th class="text-center" id="thPrice" style="width:15%">Harga</th>
-                        <th class="text-center" id="thActionHeader" style="width:25%">Action</th>
+                        <th class="text-center" id="thCustomer" style="width:60%">Username</th>
+                        <th class="text-center" id="thActionHeader" style="width:40%">Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach ($transactions as $data)
+                    @foreach ($users as $data)
                         <tr class="text-center">
-                            <td>{{ $data->customer }}</td>
-                            <td>{{ $data->product }}</td>
-                            <td>{{ $data->description }}</td>
-                            <td>Rp{{ number_format($data->price, 0, ',', '.') }}</td>
+                            <td>{{ $data->username }}</td>
                             <td>
-                                <a href="/transactions/update/{{ $data->id }}" class="btn btn-primary mb-1">Edit</a>
+                                <a href="/users/update/{{ $data->id }}" class="btn btn-primary mb-1">Edit</a>
                                 <form method="post" class="d-inline"
-                                    title="Delete" action="/transactions/delete/{{ $data->id }}">
+                                    title="Delete" action="/users/delete/{{ $data->id }}">
                                     {{ csrf_field() }}
                                     {{ method_field('DELETE') }}
                                     <button type="submit" class="btn btn-danger">

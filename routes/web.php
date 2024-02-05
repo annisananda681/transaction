@@ -21,7 +21,7 @@ Route::get('/users/update/{id}', [UserController::class, 'updatePage']);
 Route::post('/users/update-data', [UserController::class, 'updateData']);
 Route::post('/users/add-data', [UserController::class, 'addData']);
 Route::get('/users/add', [UserController::class, 'addPage']);
-Route::get('/', [UserController::class, 'index']);
+Route::get('/users', [UserController::class, 'index']);
 Route::delete('/transactions/delete/{id}', [TransactionController::class, 'deleteData']);
 Route::get('/transactions/update/{id}', [TransactionController::class, 'updatePage']);
 Route::post('/transactions/update-data', [TransactionController::class, 'updateData']);

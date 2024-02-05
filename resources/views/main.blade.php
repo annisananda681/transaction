@@ -43,13 +43,13 @@
                         <a href="#" class="nav-link text-light text-center p-3 disabled">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-light text-center p-3">Transaction</a>
+                        <a href="/" class="nav-link text-light text-center p-3">Transaction</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-light text-center p-3">User</a>
+                        <a href="/users/" class="nav-link text-light text-center p-3">User</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link text-light text-center p-3">Logout</a>
+                        <a href="/logout" class="nav-link text-light text-center p-3">Logout</a>
                     </li>
                 </ul>
             </div>
